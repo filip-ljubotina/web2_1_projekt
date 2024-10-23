@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title New Ticket Form
+  body
+    h1 Create New Ticket
+    form(action="/new-ticket" method="POST")
+      label(for="vatin") VATIN:
+      input(type="text" id="vatin" name="vatin" required)
+      br
+      label(for="firstName") First Name:
+      input(type="text" id="firstName" name="firstName" required)
+      br
+      label(for="lastName") Last Name:
+      input(type="text" id="lastName" name="lastName" required)
+      br
+      button(type="submit") Submit
+    if error
+        h3 Error while generating new ticket: #{error}

@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: ${DATABASE_PASSWORD} #"matematika"
+    username: ${DATABASE_USERNAME} #"postgres"
+    url: ${DATABASE_URL} #"jdbc:postgresql://localhost:5432/postgres"
+    driverClassName: "org.postgresql.Driver"
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "https://dev-pq6kcfoy6i780ddd.us.auth0.com/"
+          audiences: "FER-Web2 1_projekt-API"

@@ -1,0 +1,14 @@
+html 
+    head 
+        title Ticket Generating Application
+    body
+        h1 Total Tickets #{numOfTickets}
+        
+    h1
+        a(href='/new-ticket') Generate new ticket          
+    if imgSrc
+        h1 Last generated ticket
+        img(src=imgSrc, alt="Ticket Image")
+
+
+        

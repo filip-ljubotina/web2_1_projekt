@@ -1,0 +1,17 @@
+html 
+    head 
+        title Ticket Info
+    body
+        h4 Welcome #{userName}        
+        a(href='/', title='Home') Home  
+        if ticketData
+            h3 Ticket Information:
+            ul
+                li Ticket ID: #{ticketData.id}
+                li VATIN: #{ticketData.vatin}
+                li First Name: #{ticketData.firstName}
+                li Last Name: #{ticketData.lastName}
+                li Issue Date: #{ticketData.createdAt}     
+        if error
+            h3 Error while generating new ticket: #{error}
+        
